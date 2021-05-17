@@ -22,7 +22,14 @@ var app = new Vue ({
             this.immagine = "montagna"
         },
         fotoRandom : function () {
-            this.foto ='https://cdn.getyourguide.com/img/location/54b54f776a795.jpeg/88.jpg'
+            const immagini = [
+                "https://cdn.getyourguide.com/img/location/54b54f776a795.jpeg/88.jpg",
+                "https://www.hotelalgamilano.it/sites/barbara2torri.gisnet.it/files/Hotel_Santa_Barbara_Milano_01t.jpg",
+                "https://www.lamadia.com/wp-content/uploads/2021/02/madrid.jpg",
+                "https://www.10cose.it/wp-content/uploads/2015/11/vienna.jpg"
+            ];
+                const randomIndex = Math.floor(Math.random() * immagini.length);
+                this.foto = immagini[randomIndex];
         },
         creaSaluto: function () {
             const d = new Date();
@@ -37,6 +44,5 @@ var app = new Vue ({
         } 
     }
 });
-
 
 
