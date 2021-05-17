@@ -39,10 +39,20 @@ button:hover {
 
 
 .mare {
-    background-image: url("http://citywallpaperhd.com/uploads/photo/original/320-malta-st-julian.jpg");
+    background-image: url("https://images.lonelyplanetitalia.it/uploads/shutterstockrf-698523370?q=80&p=slider&s=af57f95d6fce7083b4631c3b49f0abd9");
 }
 
 .montagna {
     background-image: url("https://hips.hearstapps.com/gioit.h-cdn.co/assets/17/36/1504934220-castelloneuschwanstein.jpg");
+}
+
+.random {
+    width: 800px;
+    height: 400px;
+    margin: auto;
+}
+
+.random img {
+    width: 100%;
 }
 

@@ -12,10 +12,14 @@
 </head>
 <body>
     <div class= "container" id="root">
-        <h1 :class = "saluto">{{saluto}} {{messaggio}}</h1>
-        <button @click = "mare">Mare</button>
-        <button @click = "montagna">Montagna</button>
-        <div :class = "immagine" id="preview"></div>
+        <h1>{{saluto}} {{messaggio}}</h1>
+        <button @click="mare">Mare</button>
+        <button @click="montagna">Montagna</button>
+        <div :class="immagine" id="preview"></div>
+        <button @click = "fotoRandom"> Destinazione casuale</button>
+        <div class="random">
+            <img :src="foto" alt="">
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>

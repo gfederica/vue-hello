@@ -8,7 +8,11 @@ var app = new Vue ({
     data : {
         saluto: "",
         messaggio: "Il tuo prossimo viaggio è qui...",
-        immagine:  ""
+        immagine:  "",
+        foto: ""
+    },
+    created: function () {
+        this.creaSaluto();
     },
     methods : {
         mare: function () {
@@ -17,17 +21,20 @@ var app = new Vue ({
         montagna: function () {
             this.immagine = "montagna"
         },
-        // function (saluto) {
-        //     var d = new Date();
-        //     var h = d.getHours(); 
-        //     if (h < 12 || h > 3) {
-        //         this.saluto = "Buongiorno!"
-        //     } else if (h > 12 && h < 17) {
-        //         this.saluto = "Buon pomeriggio!"
-        //     } else {
-        //         this.saluto = "Buonasera!"
-        //     }
-        // } 
+        fotoRandom : function () {
+            this.foto ='https://cdn.getyourguide.com/img/location/54b54f776a795.jpeg/88.jpg'
+        },
+        creaSaluto: function () {
+            const d = new Date();
+            const h = d.getHours(); 
+            if (h > 12 || h < 17) {
+                this.saluto = "Buon pomeriggio!"
+            } else if (h < 12 && h > 03) {
+                this.saluto = "Buongiorno!"
+            } else {
+                this.saluto = "Buonasera!"
+            }
+        } 
     }
 });
 
